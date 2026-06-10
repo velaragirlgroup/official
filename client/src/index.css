@@ -1,0 +1,403 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --primary: var(--color-blue-700);
+  --primary-foreground: var(--color-blue-50);
+  --sidebar-primary: var(--color-blue-600);
+  --sidebar-primary-foreground: var(--color-blue-50);
+  --chart-1: var(--color-blue-300);
+  --chart-2: var(--color-blue-500);
+  --chart-3: var(--color-blue-600);
+  --chart-4: var(--color-blue-700);
+  --chart-5: var(--color-blue-800);
+  --radius: 0.65rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.235 0.015 65);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.235 0.015 65);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.235 0.015 65);
+  --secondary: oklch(0.98 0.001 286.375);
+  --secondary-foreground: oklch(0.4 0.015 65);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.141 0.005 285.823);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.623 0.214 259.815);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.235 0.015 65);
+  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(0.623 0.214 259.815);
+}
+
+.dark {
+  --primary: var(--color-blue-700);
+  --primary-foreground: var(--color-blue-50);
+  --sidebar-primary: var(--color-blue-500);
+  --sidebar-primary-foreground: var(--color-blue-50);
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.85 0.005 65);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.85 0.005 65);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.85 0.005 65);
+  --secondary: oklch(0.24 0.006 286.033);
+  --secondary-foreground: oklch(0.7 0.005 65);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground:  oklch(0.92 0.005 65);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.488 0.243 264.376);
+  --chart-1: var(--color-blue-300);
+  --chart-2: var(--color-blue-500);
+  --chart-3: var(--color-blue-600);
+  --chart-4: var(--color-blue-700);
+  --chart-5: var(--color-blue-800);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.85 0.005 65);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground:  oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.488 0.243 264.376);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* VELARA Design System — Obsidian Empress */
+
+  /* Typography */
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    font-weight: 200;
+    color: #c9956c;
+    text-transform: uppercase;
+  }
+
+  /* Navigation */
+  .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+    color: #f0eeec;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #c9956c;
+  }
+
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #c9956c;
+  }
+
+  /* Buttons */
+  .btn-velara {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #c9956c;
+    color: #c9956c;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    font-weight: 300;
+    transition: all 0.3s ease;
+  }
+
+  .btn-velara:hover {
+    background: #c9956c;
+    color: #080808;
+  }
+
+  .btn-velara-filled {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #c9956c;
+    color: #080808;
+    background: #c9956c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    font-weight: 300;
+    transition: all 0.3s ease;
+  }
+
+  .btn-velara-filled:hover {
+    background: #d9a876;
+    border-color: #d9a876;
+  }
+
+  /* Forms */
+  .velara-input {
+    width: 100%;
+    padding: 0.75rem 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(240, 238, 236, 0.2);
+    color: #f0eeec;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    transition: all 0.3s ease;
+  }
+
+  .velara-input:focus {
+    outline: none;
+    border-bottom-color: #c9956c;
+    background: rgba(201, 149, 108, 0.02);
+  }
+
+  .velara-input::placeholder {
+    color: #f0eeec;
+    opacity: 0.3;
+  }
+
+  /* Decorative Lines */
+  .velara-line-left {
+    height: 2px;
+    background: linear-gradient(to right, #c9956c, transparent);
+  }
+
+  .velara-line {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #c9956c, transparent);
+  }
+
+  /* Social Icons */
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(201, 149, 108, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c9956c;
+    transition: all 0.3s ease;
+  }
+
+  .social-icon:hover {
+    border-color: #c9956c;
+    background: rgba(201, 149, 108, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* Gallery Items */
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 8, 8, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+
+  /* Member Cards */
+  .member-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .member-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(8, 8, 8, 0.7) 0%, rgba(201, 149, 108, 0.2) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .member-card:hover .member-overlay {
+    opacity: 1;
+  }
+
+  .member-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(8, 8, 8, 0.95), transparent);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .member-card:hover .member-info {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .member-bio {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  /* Music Card */
+  .music-card {
+    border: 1px solid rgba(240, 238, 236, 0.1);
+    background: rgba(8, 8, 8, 0.5);
+    border-radius: 0;
+  }
+
+  .music-card:hover {
+    border-color: rgba(201, 149, 108, 0.2);
+    background: rgba(8, 8, 8, 0.8);
+  }
+
+  /* Hero Gradient */
+  .hero-gradient-bottom {
+    background: linear-gradient(to bottom, transparent, rgba(8, 8, 8, 0.9));
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up.delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  /* Scroll Reveal */
+  .reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .reveal-hidden.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
