@@ -58,7 +58,7 @@ export default function Home() {
     <div className="bg-[#080808] min-h-screen">
       <PageSEO
         title="Home"
-        description="VELARA is a modern girl group from Namibia with an international vision. Elegant, confident, powerful, and inspiring — four voices, one vision."
+        description="VELARA is a girl group from Namibia creating music for a global audience.
         image={HERO_IMG}
       />
       <Navigation />
@@ -93,8 +93,8 @@ export default function Home() {
               className="text-[#f0eeec]/50 max-w-2xl mx-auto mb-10 animate-fade-up delay-300"
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1.1rem" }}
             >
-              A modern girl group from Namibia with an international vision. Elegant, confident,
-              powerful, and inspiring.
+              A girl group from Namibia creating music for a global audience.
+              
             </p>
             <div className="flex flex-wrap gap-4 justify-center animate-fade-up delay-400">
               <Link href="/music">
@@ -156,16 +156,16 @@ export default function Home() {
                 className="reveal-hidden text-[#f0eeec]/50 leading-relaxed mb-8"
                 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
               >
-                VELARA is more than a music group — we are a movement. Four young women from Namibia
-                who dared to dream beyond borders, combining the richness of African culture with the
-                sophistication of international artistry.
+                VELARA is a four-member girl group from Namibia. We create modern afropop music that blends
+                strong melodies, polished performances, and authentic storytelling with our African roots. Our goal is
+                simple: to create music that connects with audiences everywhere while proudly representing where we come from.
               </p>
               <p
                 className="reveal-hidden text-[#f0eeec]/40 leading-relaxed mb-10"
                 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
               >
-                Our name carries meaning: strength, elegance, and the power of unity. We create music
-                that speaks to the soul — honest, emotional, and unforgettable.
+                VELARA represents confidence, unity, and artistic ambition. Every song, performance and visual is created
+                with intention, reflecting the identity we are building as artists.
               </p>
               <Link href="/about">
                 <button className="reveal-hidden btn-velara flex items-center gap-2">
@@ -200,8 +200,8 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
             {[
-              { name: "Amara", role: "Lead Vocalist" },
-              { name: "Zuri", role: "Songwriter & Vocalist" },
+              { name: "Angeline", role: "Lead Vocalist" },
+              { name: "Magdalena", role: "Songwriter & Vocalist" },
               { name: "Nadia", role: "Performer & Vocalist" },
               { name: "Leila", role: "Dancer & Vocalist" },
             ].map((member, i) => (
@@ -268,7 +268,7 @@ export default function Home() {
                     className="text-[#c9956c] text-lg"
                     style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
                   >
-                    Debut Single · 2025
+                    Debut Single · 2026
                   </div>
                 </div>
                 <Play size={20} className="text-[#c9956c]/50" />
@@ -294,7 +294,7 @@ export default function Home() {
                     className="text-[#c9956c] text-lg"
                     style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
                   >
-                    Debut EP · 2025
+                    Debut EP · 2026
                   </div>
                 </div>
                 <Play size={20} className="text-[#c9956c]/50" />
@@ -303,7 +303,7 @@ export default function Home() {
                 className="text-[#f0eeec]/40 text-sm"
                 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
               >
-                Five original tracks showcasing the range and artistry of VELARA.
+                Four original tracks showcasing the range and artistry of VELARA.
               </p>
             </div>
           </div>
