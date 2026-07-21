@@ -58,7 +58,7 @@ export default function Home() {
     <div className="bg-[#080808] min-h-screen">
       <PageSEO
         title="Home"
-        description="VELARA is a girl group from Namibia creating music for a global audience.
+        description="VELARA is a girl group from Namibia creating music for a global audience."
         image={HERO_IMG}
       />
       <Navigation />
