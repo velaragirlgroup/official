@@ -15,7 +15,10 @@ import Media from "./pages/Media";
 import Contact from "./pages/Contact";
 import Community from "./pages/Community";
 
-const BASE_PATH = "/official";
+// Derived from Vite's own `base` config so the router can never drift out of
+// sync with it again (that mismatch is what caused the blank-page regression
+// when the site moved from /official/ to a custom domain at "/").
+const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 function AppRouter() {
   return (
