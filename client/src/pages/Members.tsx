@@ -40,7 +40,7 @@ const members = [
     name: "Leila",
     role: "Vocalist & Dancer",
     bio: "Leila combines vocals with movement and visual expression, bringing a strong performance dimension to VELARA. Her dance background contributes to the group's choreography and visual identity.",
-    talents: ["Vocals", "Dance"],
+    talents: ["Vocals", "Dance", "Visual Art"],
     origin: "Rundu, Namibia",
   },
 ];
