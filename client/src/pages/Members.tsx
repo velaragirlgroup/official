@@ -16,32 +16,32 @@ const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc
 
 const members = [
   {
-    name: "Amara",
-    role: "Lead Vocalist",
-    bio: "Amara is the voice of VELARA. With a 3-octave range and classical training, she brings emotional depth to every performance.",
-    talents: ["Vocals", "Songwriting", "Piano"],
-    origin: "Windhoek, Namibia",
+    name: "Angeline",
+    role: "Vocalist & Songwriter",
+    bio: "Angeline is a vocalist and songwriter who contributes to VELARA's musical direction and creative identity. Her songwriting helps shape the stories and ideas behind the group's music.",
+    talents: ["Vocals", "Songwriting", "Production"],
+    origin: "Rundu, Namibia",
   },
   {
-    name: "Zuri",
-    role: "Songwriter & Vocalist",
-    bio: "Zuri crafts the stories behind VELARA's music. Her lyrics blend poetic storytelling with contemporary themes.",
-    talents: ["Songwriting", "Vocals", "Production"],
-    origin: "Swakopmund, Namibia",
+    name: "Magdalena",
+    role: "Vocalist & Performer",
+    bio: "Magdalena brings confidence, expression, and presence to VELARA's performances. Her versatility as a vocalist and performer adds energy to the group's sound and stage identity.",
+    talents: ["Vocals", "Performance"],
+    origin: "Rundu, Namibia",
   },
   {
     name: "Nadia",
     role: "Performer & Vocalist",
     bio: "Nadia brings energy and charisma to the stage. Her dynamic performances captivate audiences worldwide.",
     talents: ["Performance", "Vocals", "Choreography"],
-    origin: "Walvis Bay, Namibia",
+    origin: "Rundu, Namibia",
   },
   {
     name: "Leila",
     role: "Dancer & Vocalist",
     bio: "Leila's movement vocabulary is rooted in African dance traditions. She adds visual artistry to VELARA's sound.",
     talents: ["Dance", "Vocals", "Visual Art"],
-    origin: "Oshakati, Namibia",
+    origin: "Rundu, Namibia",
   },
 ];
 
