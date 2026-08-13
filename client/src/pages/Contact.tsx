@@ -240,7 +240,7 @@ export default function Contact() {
               { name: "Instagram", icon: Instagram, url: "#" },
               { name: "Twitter", icon: Twitter, url: "#" },
               { name: "YouTube", icon: Youtube, url: "#" },
-              { name: "Facebook", icon: Facebook, url: "#" },
+              { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/velaragroup" },
               { name: "Spotify", icon: Music2, url: "#" },
             ].map((social, i) => {
               const Icon = social.icon;
