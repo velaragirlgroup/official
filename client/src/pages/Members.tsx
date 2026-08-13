@@ -19,7 +19,7 @@ const members = [
     name: "Angeline",
     role: "Vocalist & Songwriter",
     bio: "Angeline is a vocalist and songwriter who contributes to VELARA's musical direction and creative identity. Her songwriting helps shape the stories and ideas behind the group's music.",
-    talents: ["Vocals", "Songwriting", "Production"],
+    talents: ["Vocals", "Songwriting"],
     origin: "Rundu, Namibia",
   },
   {
@@ -31,16 +31,16 @@ const members = [
   },
   {
     name: "Nadia",
-    role: "Performer & Vocalist",
-    bio: "Nadia brings energy and charisma to the stage. Her dynamic performances captivate audiences worldwide.",
-    talents: ["Performance", "Vocals", "Choreography"],
+    role: "Vocalist & Performer",
+    bio: "Nadia brings charisma, energy, and a natural connection with the audience to VELARA. Her performance style contributes to the group's dynamic stage presence.",
+    talents: ["Vocals", "Performance"],
     origin: "Rundu, Namibia",
   },
   {
     name: "Leila",
-    role: "Dancer & Vocalist",
-    bio: "Leila's movement vocabulary is rooted in African dance traditions. She adds visual artistry to VELARA's sound.",
-    talents: ["Dance", "Vocals", "Visual Art"],
+    role: "Vocalist & Dancer",
+    bio: "Leila combines vocals with movement and visual expression, bringing a strong performance dimension to VELARA. Her dance background contributes to the group's choreography and visual identity.",
+    talents: ["Vocals", "Dance"],
     origin: "Rundu, Namibia",
   },
 ];
