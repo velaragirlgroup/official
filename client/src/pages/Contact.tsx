@@ -248,10 +248,6 @@ export default function Contact() {
                 <a
                   key={social.name}
                   href={social.url}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    toast.info(`${social.name} links coming soon!`);
-                  }}
                   className="reveal-hidden social-icon"
                   style={{ transitionDelay: `${i * 60}ms` }}
                   title={social.name}
