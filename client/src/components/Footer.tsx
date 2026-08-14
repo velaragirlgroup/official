@@ -95,18 +95,17 @@ export default function Footer() {
             </h4>
             <div className="flex gap-3">
               {[
-                { icon: Instagram, label: "Instagram" },
-                { icon: Twitter, label: "Twitter" },
-                { icon: Youtube, label: "YouTube" },
-                { icon: Facebook, label: "Facebook" },
-                { icon: Music2, label: "Spotify" },
+                { icon: Instagram, label: "Instagram", url: "https://www.instagram.com/velaragirlgroup" },
+                { icon: Twitter, label: "Twitter", url: "https://x.com/velaragirlgroup" },
+                { icon: Youtube, label: "YouTube", url: "https://www.youtube.com/@velaragirlgroup" },
+                { icon: Facebook, label: "Facebook", url: "https://www.facebook.com/velaragroup" },
+                { icon: Music2, label: "Spotify", url: "https://open.spotify.com" },
               ].map((social) => {
                 const Icon = social.icon;
                 return (
                   <a
                     key={social.label}
-                    href="#"
-                    onClick={(e) => e.preventDefault()}
+                    href={social.url}
                     className="social-icon"
                     title={social.label}
                   >
