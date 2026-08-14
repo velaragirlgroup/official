@@ -241,7 +241,7 @@ export default function Contact() {
               { name: "Twitter", icon: Twitter, url: "https://x.com/velaragirlgroup" },
               { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/@velaragirlgroup" },
               { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/velaragroup" },
-              { name: "Spotify", icon: Music2, url: "#" },
+              { name: "Spotify", icon: Music2, url: "https://open.spotify.com" },
             ].map((social, i) => {
               const Icon = social.icon;
               return (
