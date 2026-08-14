@@ -237,10 +237,10 @@ export default function Contact() {
 
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              { name: "Instagram", icon: Instagram, url: "#" },
-              { name: "Twitter", icon: Twitter, url: "#" },
-              { name: "YouTube", icon: Youtube, url: "#" },
-              { name: "Facebook", icon: Facebook, url: "www.facebook.com/velaragroup" },
+              { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/velaragirlgroup" },
+              { name: "Twitter", icon: Twitter, url: "https://x.com/velaragirlgroup" },
+              { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/@velaragirlgroup" },
+              { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/velaragroup" },
               { name: "Spotify", icon: Music2, url: "#" },
             ].map((social, i) => {
               const Icon = social.icon;
