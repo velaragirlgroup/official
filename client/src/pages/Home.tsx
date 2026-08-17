@@ -200,10 +200,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
             {[
-              { name: "Angeline", role: "Lead Vocalist" },
-              { name: "Magdalena", role: "Songwriter & Vocalist" },
-              { name: "Nadia", role: "Performer & Vocalist" },
-              { name: "Leila", role: "Dancer & Vocalist" },
+              { name: "Angeline", role: "Vocalist & Songwriter" },
+              { name: "Magdalena", role: "Vocalist & Performer" },
+              { name: "Nadia", role: "Vocalist & Performer" },
+              { name: "Leila", role: "Vocalist & Dancer" },
             ].map((member, i) => (
               <div
                 key={member.name}
