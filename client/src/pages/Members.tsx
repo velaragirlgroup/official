@@ -7,7 +7,7 @@ import PageSEO from "@/components/PageSEO";
 import { Instagram, Twitter } from "lucide-react";
 
 const MEMBER_IMGS = [
-  "https://imgur.com/gallery/image-coming-soon-T7jfZsI",
+  "https://res.cloudinary.com/anjpczrc/image/upload/f_auto,q_auto/images",
   "https://imgur.com/gallery/image-coming-soon-T7jfZsI",
   "https://imgur.com/gallery/image-coming-soon-T7jfZsI",
   "https://imgur.com/gallery/image-coming-soon-T7jfZsI",
