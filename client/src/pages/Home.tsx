@@ -10,10 +10,10 @@ import Footer from "@/components/Footer";
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_hero_main-6VKafWfFYMoFtjwM7Je8kc.webp";
 const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_about_image-UBFngBNUeszp4fnAGUQSdu.webp";
 const MEMBER_IMGS = [
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_member_1-TraWSqfxbKfZqdLiv24qsf.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_member_2-eif7eUjc2Awdn5KE76LwSN.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_member_3-jFCvhFHBRQDGKXFXdN6vqk.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_member_4-kTfKjLkL5FQmJGGVGQH2Yd.webp",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1786961689/image_coming_soon.jpg",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1786961689/image_coming_soon.jpg",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1786961689/image_coming_soon.jpg",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1786961689/image_coming_soon.jpg",
 ];
 const GALLERY_1 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_gallery_1-4EzJ2ijUbJd3QEpWqW8L6W.webp";
 const GALLERY_2 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_gallery_2-2qRwmzBGdiVbhgh4BjDwiy.webp";
