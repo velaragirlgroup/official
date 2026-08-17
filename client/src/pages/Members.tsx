@@ -7,10 +7,10 @@ import PageSEO from "@/components/PageSEO";
 import { Instagram, Twitter } from "lucide-react";
 
 const MEMBER_IMGS = [
-  "https://res.cloudinary.com/anjpczrc/image/upload/f_auto,q_auto/images",
-  "https://imgur.com/gallery/image-coming-soon-T7jfZsI",
-  "https://imgur.com/gallery/image-coming-soon-T7jfZsI",
-  "https://imgur.com/gallery/image-coming-soon-T7jfZsI",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1786961689/image_coming_soon.jpg",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1786961689/image_coming_soon.jpg",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1786961689/image_coming_soon.jpg",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1786961689/image_coming_soon.jpg",
 ];
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_hero_main-6VKafWfFYMoFtjwM7Je8kc.webp";
 
