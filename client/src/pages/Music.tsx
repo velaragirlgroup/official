@@ -14,23 +14,23 @@ const songs = [
   {
     title: "Debut Single",
     artist: "VELARA",
-    duration: "3:42",
-    genre: "Afropop",
-    status: "Coming 2025",
+    duration: "2:13",
+    genre: "Progressive Afropop/Dance",
+    status: "October 2026",
   },
   {
     title: "Untitled Track 2",
     artist: "VELARA",
-    duration: "4:15",
-    genre: "R&B",
-    status: "In Production",
+    duration: "2:15",
+    genre: "Progressive Afropop/Afro House",
+    status: "2027",
   },
   {
     title: "Untitled Track 3",
     artist: "VELARA",
-    duration: "3:28",
-    genre: "Soul",
-    status: "In Production",
+    duration: "2:28",
+    genre: "Progressive Afropop",
+    status: "2027",
   },
 ];
 
@@ -40,7 +40,7 @@ const platforms = [
   { name: "YouTube Music", url: "#" },
   { name: "Amazon Music", url: "#" },
   { name: "Tidal", url: "#" },
-  { name: "SoundCloud", url: "#" },
+  { name: "SoundCloud", url: "https://soundcloud.com/velaragroup" },
 ];
 
 function useReveal() {
@@ -102,7 +102,12 @@ export default function Music() {
               className="text-[#f0eeec]/50 leading-relaxed text-lg"
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
             >
-              Our music blends the warmth of African rhythms with contemporary pop and R&B. Each song is a story — raw, emotional, and crafted with intention. We draw inspiration from our Namibian roots while embracing global influences.
+              ## Our Music
+
+VELARA creates modern Afro music rooted in Namibia and shaped by a global perspective. Our sound blends progressive Afropop with contemporary dance and African influences, bringing together four voices, distinct personalities, and a shared creative vision.
+
+We sing in English and Rukwangali, connecting our cultural identity with the sounds and influences that inspire us from around the world. Every song is an opportunity to tell a story, express who we are, and create music that can travel beyond borders.
+
             </p>
           </div>
         </div>
@@ -226,13 +231,13 @@ export default function Music() {
               className="reveal-hidden text-[#f0eeec]/50 leading-relaxed mb-6"
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
             >
-              Our debut EP is in production and will feature five original tracks that showcase the full range of VELARA's artistry. Each song tells a unique story while maintaining the cohesive vision that defines our sound.
+              Our debut EP is in production and will feature four original tracks that showcase the full range of VELARA's artistry. Each song tells a unique story while maintaining the cohesive vision that defines our sound.
             </p>
             <p
               className="reveal-hidden text-[#f0eeec]/40 leading-relaxed"
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
             >
-              Expected release: 2025. Follow our social media for announcements and exclusive previews.
+              Expected release: 2027. Follow our social media for announcements and exclusive previews.
             </p>
           </div>
         </div>
