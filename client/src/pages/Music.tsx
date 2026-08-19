@@ -102,7 +102,7 @@ export default function Music() {
               className="text-[#f0eeec]/50 leading-relaxed text-lg"
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
             >
-            VELARA creates modern Afro music rooted in Namibia and shaped by a global perspective. Our sound blends progressive Afropop with contemporary dance and African influences, bringing together four voices, distinct personalities, and a shared creative vision.
+            VELARA creates modern afro music rooted in Namibia and shaped by a global perspective. Our sound blends progressive Afropop with contemporary dance and African influences, bringing together four voices, distinct personalities, and a shared creative vision.
 
 We sing in English and Rukwangali, connecting our cultural identity with the sounds and influences that inspire us from around the world. Every song is an opportunity to tell a story, express who we are, and create music that can travel beyond borders.
 
