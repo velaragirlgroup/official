@@ -120,10 +120,10 @@ export default function About() {
             </h2>
             <div className="reveal-hidden velara-line-left w-24 mb-8" />
             <p className="reveal-hidden text-[#f0eeec]/50 leading-relaxed mb-6 text-lg" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}>
-              We are inspired by the strength of African women, the richness of our continent's culture, and the boundless possibilities of the digital age. VELARA exists to prove that excellence knows no borders.
+              We are inspired by the strength of African women, the richness of our cultures, and the artists who have paved the way before us. From Namibian female groups to Southern African icon Brenda Fassie and East African artists such as Vanessa Mdee, their creativity reminds us that our voices can reach beyond borders.
             </p>
             <p className="reveal-hidden text-[#f0eeec]/40 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}>
-              Through our music, we want to inspire young people across Africa and the diaspora to believe in themselves, pursue their passions fearlessly, and create art that changes the world.
+              Through our music, we hope to inspire young people across Africa and the diaspora to believe in themselves, pursue their passions, and create without limits.
             </p>
           </div>
         </div>
