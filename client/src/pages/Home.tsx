@@ -268,7 +268,7 @@ export default function Home() {
                     className="text-[#c9956c] text-lg"
                     style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
                   >
-                    Debut Single · 2026
+                    Debut Single · October 2026
                   </div>
                 </div>
                 <Play size={20} className="text-[#c9956c]/50" />
