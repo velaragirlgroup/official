@@ -37,7 +37,6 @@ export default function Contact() {
   company: "",
   type: "",
   message: "",
-  botField: "",
 });
   const [submitting, setSubmitting] = useState(false);
   const formRef = useReveal();
@@ -156,19 +155,6 @@ export default function Contact() {
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* honeypot - hidden field to trap bots */}
-<div style={{ display: "none" }}>
-  <label>
-    Don’t fill this out if you're human:
-    <input
-      type="text"
-      name="botField"
-      value={formData.botField}
-      onChange={handleChange}
-      autoComplete="off"
-    />
-  </label>
-</div>
                 <div>
                   <label className="section-label block mb-3">Name *</label>
                   <input
