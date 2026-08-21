@@ -9,6 +9,8 @@ import { toast } from "sonner";
 
 const MUSIC_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_music_bg-WtMtnLGFSA85b5NP4daeDs.webp";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xnpawwaj";
+
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -45,15 +47,36 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1500));
-    setSubmitting(false);
+  e.preventDefault();
+  setSubmitting(true);
+
+  try {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!res.ok) {
+      const data = await res.json().catch(() => null);
+      const msg = data?.error || data?.message || "Failed to send message";
+      throw new Error(msg);
+    }
+
     toast.success("Message sent!", {
       description: "Thank you for reaching out. We'll be in touch soon.",
     });
     setFormData({ name: "", email: "", company: "", type: "", message: "" });
-  };
+  } catch (err) {
+    console.error("Formspree error:", err);
+    toast.error("Failed to send message. Please try again later.");
+  } finally {
+    setSubmitting(false);
+  }
+};
 
   return (
     <div className="bg-[#080808] min-h-screen">
