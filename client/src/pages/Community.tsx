@@ -9,6 +9,7 @@ import { toast } from "sonner";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_hero_main-6VKafWfFYMoFtjwM7Je8kc.webp";
 const GALLERY_2 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_gallery_2-2qRwmzBGdiVbhgh4BjDwiy.webp";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xnpawwaj";
 
 const fanMessages = [
   {
@@ -89,29 +90,79 @@ export default function Community() {
   const merchRef = useReveal();
 
   const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setSubscribing(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setSubscribing(false);
+  e.preventDefault();
+  if (!email) return;
+  setSubscribing(true);
+
+  try {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        type: "newsletter",
+        _replyto: email,
+      }),
+    });
+
+    if (!res.ok) {
+      const data = await res.json().catch(() => null);
+      const msg = data?.error || data?.message || "Failed to subscribe";
+      throw new Error(msg);
+    }
+
     toast.success("You're on the list!", {
       description: "Welcome to the VELARA family. We'll keep you updated.",
     });
     setEmail("");
-  };
+  } catch (err) {
+    console.error("Formspree error (newsletter):", err);
+    toast.error("Subscription failed. Please try again later.");
+  } finally {
+    setSubscribing(false);
+  }
+};
 
   const handleFanMessage = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!fanName || !fanMessage) return;
-    setSendingMessage(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setSendingMessage(false);
+  e.preventDefault();
+  if (!fanName || !fanMessage) return;
+  setSendingMessage(true);
+
+  try {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify({
+        name: fanName,
+        message: fanMessage,
+        type: "fan_message",
+      }),
+    });
+
+    if (!res.ok) {
+      const data = await res.json().catch(() => null);
+      const msg = data?.error || data?.message || "Failed to send message";
+      throw new Error(msg);
+    }
+
     toast.success("Message sent to VELARA!", {
       description: "Thank you for your love and support.",
     });
     setFanName("");
     setFanMessage("");
-  };
+  } catch (err) {
+    console.error("Formspree error (fan message):", err);
+    toast.error("Failed to send message. Please try again later.");
+  } finally {
+    setSendingMessage(false);
+  }
+};
 
   return (
     <div className="bg-[#080808] min-h-screen">
