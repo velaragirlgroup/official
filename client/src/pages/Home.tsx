@@ -93,7 +93,7 @@ export default function Home() {
               className="text-[#f0eeec]/50 max-w-2xl mx-auto mb-10 animate-fade-up delay-300"
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1.1rem" }}
             >
-              A girl group from Namibia creating music for a global audience.
+              An afro girl group from Namibia creating music for a global audience.
               
             </p>
             <div className="flex flex-wrap gap-4 justify-center animate-fade-up delay-400">
