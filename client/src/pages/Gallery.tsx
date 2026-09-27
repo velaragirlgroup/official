@@ -8,16 +8,17 @@ import { X, ZoomIn } from "lucide-react";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_hero_main-6VKafWfFYMoFtjwM7Je8kc.webp";
 const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_about_image-UBFngBNUeszp4fnAGUQSdu.webp";
-const GALLERY_1 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_gallery_1-4EzJ2ijUbJd3QEpWqW8L6W.webp";
-const GALLERY_2 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_gallery_2-2qRwmzBGdiVbhgh4BjDwiy.webp";
 
 const galleryItems = [
-  { img: HERO_IMG, category: "Editorial", title: "VELARA Group Portrait" },
-  { img: ABOUT_IMG, category: "Behind the Scenes", title: "Studio Session" },
-  { img: GALLERY_1, category: "Fashion", title: "Fashion Editorial" },
-  { img: GALLERY_2, category: "Performance", title: "Live Performance" },
-  { img: HERO_IMG, category: "Editorial", title: "Individual Portraits" },
-  { img: ABOUT_IMG, category: "Lifestyle", title: "Candid Moments" },
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790507991/copy_of_20260925_095531.jpg", category: "Editorial", title: "VELARA Group Portrait" },
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504267/IMG_9618_1_1_1_2.jpg", category: "Behind the Scenes", title: "Studio Session" },
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790508638/20260925_100344.jpg", category: "Fashion", title: "Fashion Editorial" },
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504299/20260925_085814.jpg", category: "Performance", title: "Live Performance" },
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790508404/20260925_042343.jpg", category: "Editorial", title: "Individual Portraits" },
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504358/IMG_9640_1.jpg", category: "Lifestyle", title: "Candid Moments" },
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504341/IMG_9635_1.jpg", category: "Portrait", title: "Portrait 7" },
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504322/20260925_053959.jpg", category: "Portrait", title: "Portrait 8" },
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504335/IMG_9634.jpg", category: "Fashion", title: "Fashion 9" },
 ];
 
 function useReveal() {
@@ -79,7 +80,7 @@ export default function Gallery() {
       {/* Gallery Grid */}
       <section ref={galleryRef} className="py-24 md:py-32 bg-[#080808]">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {galleryItems.map((item, i) => (
               <div
                 key={i}
@@ -87,7 +88,7 @@ export default function Gallery() {
                 style={{ transitionDelay: `${i * 50}ms` }}
                 onClick={() => setLightboxIndex(i)}
               >
-                <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                <img src={item.img} alt={item.title} loading="lazy" className="w-full h-full object-cover" />
                 <div className="gallery-overlay">
                   <ZoomIn size={32} className="text-[#c9956c]" />
                 </div>
