@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_hero_main-6VKafWfFYMoFtjwM7Je8kc.webp";
 const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_about_image-UBFngBNUeszp4fnAGUQSdu.webp";
 const MEMBER_IMGS = [
-  "https://res.cloudinary.com/anjpczrc/image/upload/v1790539996/copy_of_20260927_070726.jpg",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1790540769/copy_of_20260927_070726.jpg",
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504342/IMG_9632_1.jpg",
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504364/IMG_9638_1.jpg",
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504295/20260925_043652.jpg",
