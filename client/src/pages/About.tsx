@@ -7,8 +7,8 @@ import PageSEO from "@/components/PageSEO";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 
-const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_about_image-UBFngBNUeszp4fnAGUQSdu.webp";
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_hero_main-6VKafWfFYMoFtjwM7Je8kc.webp";
+const ABOUT_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790532190/copy_of_copy_of_20260925_095531.jpg";
+const HERO_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790508638/20260925_100344.jpg";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
