@@ -14,10 +14,10 @@ const galleryItems = [
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504267/IMG_9618_1_1_1_2.jpg", category: "Behind the Scenes", title: "Studio Session" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790508638/20260925_100344.jpg", category: "Fashion", title: "Fashion Editorial" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504299/20260925_085814.jpg", category: "Performance", title: "Live Performance" },
-  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790508404/20260925_042343.jpg", category: "Editorial", title: "Individual Portraits" },
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504322/20260925_053959.jpg", category: "Editorial", title: "Individual Portraits" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504358/IMG_9640_1.jpg", category: "Lifestyle", title: "Candid Moments" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504341/IMG_9635_1.jpg", category: "Portrait", title: "Portrait 7" },
-  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504322/20260925_053959.jpg", category: "Portrait", title: "Portrait 8" },
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790508404/20260925_042343.jpg", category: "Portrait", title: "Portrait 8" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504335/IMG_9634.jpg", category: "Fashion", title: "Fashion 9" },
 ];
 
