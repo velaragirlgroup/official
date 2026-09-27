@@ -12,7 +12,7 @@ const MEMBER_IMGS = [
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504364/IMG_9638_1.jpg",
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504295/20260925_043652.jpg",
 ];
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_hero_main-6VKafWfFYMoFtjwM7Je8kc.webp";
+const HERO_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790532190/copy_of_copy_of_20260925_095531.jpg";
 
 const members = [
   {
