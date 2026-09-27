@@ -7,10 +7,10 @@ import PageSEO from "@/components/PageSEO";
 import { Instagram, Twitter } from "lucide-react";
 
 const MEMBER_IMGS = [
-  "https://res.cloudinary.com/anjpczrc/image/upload/v1786961689/image_coming_soon.jpg",
-  "https://res.cloudinary.com/anjpczrc/image/upload/v1786961689/image_coming_soon.jpg",
-  "https://res.cloudinary.com/anjpczrc/image/upload/v1786961689/image_coming_soon.jpg",
-  "https://res.cloudinary.com/anjpczrc/image/upload/v1786961689/image_coming_soon.jpg",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1790504269/20260925_041214.jpg",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1790504342/IMG_9632_1.jpg",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1790504364/IMG_9638_1.jpg",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1790504295/20260925_043652.jpg",
 ];
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_hero_main-6VKafWfFYMoFtjwM7Je8kc.webp";
 
@@ -38,9 +38,9 @@ const members = [
   },
   {
     name: "Leila",
-    role: "Vocalist & Dancer",
-    bio: "Leila combines vocals with movement and visual expression, bringing a strong performance dimension to VELARA. Her dance background contributes to the group's choreography and visual identity.",
-    talents: ["Vocals", "Dance"],
+    role: "Dancer & Performer",
+    bio: "Leila combines dance movement and visual expression, bringing a strong performance dimension to VELARA. Her dance background contributes to the group's choreography and visual identity.",
+    talents: ["Visual Arts", "Dance"],
     origin: "Rundu, Namibia",
   },
 ];
