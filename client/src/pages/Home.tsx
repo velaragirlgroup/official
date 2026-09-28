@@ -15,8 +15,8 @@ const MEMBER_IMGS = [
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504364/IMG_9638_1.jpg",
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504295/20260925_043652.jpg",
 ];
-const GALLERY_1 = "https://res.cloudinary.com/anjpczrc/image/upload/v1790507991/copy_of_20260925_095531.jpg";
-const GALLERY_2 = "https://res.cloudinary.com/anjpczrc/image/upload/v1790574743/copy_off_20260925_100344.jpg";
+const GALLERY_1 = "https://res.cloudinary.com/anjpczrc/image/upload/v1790581529/copy_of_copy_off_20260925_095531.jpg";
+const GALLERY_2 = "https://res.cloudinary.com/anjpczrc/image/upload/v1790581387/copy_of_copy_offf_20260925_100344.jpg";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
