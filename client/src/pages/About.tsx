@@ -7,7 +7,7 @@ import PageSEO from "@/components/PageSEO";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 
-const ABOUT_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790532190/copy_of_copy_of_20260925_095531.jpg";
+const ABOUT_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790569108/copy_of_20260925_100344.jpg";
 const HERO_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790508638/20260925_100344.jpg";
 
 function useReveal() {
