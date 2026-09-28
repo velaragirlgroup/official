@@ -200,7 +200,7 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
             {[
-              { name: "Angeline", role: "Vocalist & Songwriter" },
+              { name: "Angelin", role: "Vocalist & Songwriter" },
               { name: "Magdalena", role: "Vocalist & Performer" },
               { name: "Annalisa", role: "Vocalist & Performer" },
               { name: "Penny", role: "Dancer & Performer" },
