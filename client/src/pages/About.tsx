@@ -8,7 +8,7 @@ import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 
 const ABOUT_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790569108/copy_of_20260925_100344.jpg";
-const HERO_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790574346/copy_off_20260925_100344.jpg";
+const HERO_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790574743/copy_off_20260925_100344.jpg";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
