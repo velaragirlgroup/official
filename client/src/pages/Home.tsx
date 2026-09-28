@@ -16,7 +16,7 @@ const MEMBER_IMGS = [
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504295/20260925_043652.jpg",
 ];
 const GALLERY_1 = "https://res.cloudinary.com/anjpczrc/image/upload/v1790507991/copy_of_20260925_095531.jpg";
-const GALLERY_2 = "https://res.cloudinary.com/anjpczrc/image/upload/v1790508638/20260925_100344.jpg";
+const GALLERY_2 = "https://res.cloudinary.com/anjpczrc/image/upload/v1790574743/copy_off_20260925_100344.jpg";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
