@@ -156,9 +156,9 @@ export default function Home() {
                 className="reveal-hidden text-[#f0eeec]/50 leading-relaxed mb-8"
                 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
               >
-                VELARA is a four-member girl group from Namibia. We create modern afropop music that blends
-                strong melodies, polished performances, and authentic storytelling with our African roots. Our goal is
-                simple: to create music that connects with audiences everywhere while proudly representing where we come from.
+                VELARA is a four-member female group from Namibia. We create progressive Afro music that brings
+                together strong melodies, polished performances, and authentic storytelling, shaped by our Namibian roots and
+                a global perspective. Our goal is simple: to create music that connects with audiences everywhere while proudly representing where we come from.
               </p>
               <p
                 className="reveal-hidden text-[#f0eeec]/40 leading-relaxed mb-10"
