@@ -10,7 +10,7 @@ const HERO_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790532190/c
 const ABOUT_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790569108/copy_of_20260925_100344.jpg";
 
 const galleryItems = [
-  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790507991/copy_of_20260925_095531.jpg", category: "Editorial", title: "VELARA Group Portrait" #1},
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790507991/copy_of_20260925_095531.jpg", category: "Editorial", title: "VELARA Group Portrait #1" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504267/IMG_9618_1_1_1_2.jpg", category: "Editorial", title: "VELARA Group Portrait #2" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790508638/20260925_100344.jpg", category: "Editorial", title: "VELARA Group Portrait #3" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504299/20260925_085814.jpg", category: "Editorial", title: "VELARA Group Portrait #4" },
