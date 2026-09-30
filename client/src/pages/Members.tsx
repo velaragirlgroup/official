@@ -32,14 +32,14 @@ const members = [
   {
     name: "Annalisa",
     role: "Vocalist & Performer",
-    bio: "Nadia brings charisma, energy, and a natural connection with the audience to VELARA. Her performance style contributes to the group's dynamic stage presence.",
+    bio: "Annalisa brings charisma, energy, and a natural connection with the audience to VELARA. Her performance style contributes to the group's dynamic stage presence.",
     talents: ["Vocals", "Performance"],
     origin: "Rundu, Namibia",
   },
   {
     name: "Penny",
     role: "Dancer & Performer",
-    bio: "Leila combines dance movement and visual expression, bringing a strong performance dimension to VELARA. Her dance background contributes to the group's choreography and visual identity.",
+    bio: "Penny combines dance movement and visual expression, bringing a strong performance dimension to VELARA. Her dance background contributes to the group's choreography and visual identity.",
     talents: ["Visual Arts", "Dance"],
     origin: "Rundu, Namibia",
   },
