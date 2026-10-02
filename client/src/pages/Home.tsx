@@ -54,6 +54,9 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Helper to detect video URLs (Cloudinary video uploads include '/video/upload/')
+  const isVideoUrl = (url: string) => /\.(mp4|webm|ogg)(\?.*)?$/.test(url) || url.includes("/video/upload/");
+
   return (
     <div className="bg-[#080808] min-h-screen">
       <PageSEO
@@ -94,7 +97,7 @@ export default function Home() {
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1.1rem" }}
             >
               An afro girl group from Namibia creating music for a global audience.
-              
+
             </p>
             <div className="flex flex-wrap gap-4 justify-center animate-fade-up delay-400">
               <Link href="/music">
@@ -230,169 +233,4 @@ export default function Home() {
             ))}
           </div>
 
-          <Link href="/members">
-            <button className="reveal-hidden btn-velara flex items-center gap-2">
-              All Members <ArrowRight size={12} />
-            </button>
-          </Link>
-        </div>
-      </section>
-
-      {/* ── MUSIC SECTION ── */}
-      <section ref={musicRef} className="py-24 md:py-32 bg-[#080808]">
-        <div className="container">
-          <div className="mb-14">
-            <span className="section-label reveal-hidden block mb-4">Music</span>
-            <h2
-              className="reveal-hidden font-display font-bold italic text-[#f0eeec]"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-              }}
-            >
-              The Sound of <span className="text-[#c9956c]">VELARA</span>
-            </h2>
-          </div>
-
-          <div className="reveal-hidden grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-            <div className="music-card p-6">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <div
-                    className="text-[#f0eeec] text-sm"
-                    style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}
-                  >
-                    Coming Soon
-                  </div>
-                  <div
-                    className="text-[#c9956c] text-lg"
-                    style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
-                  >
-                    Debut Single · November 2026
-                  </div>
-                </div>
-                <Play size={20} className="text-[#c9956c]/50" />
-              </div>
-              <p
-                className="text-[#f0eeec]/40 text-sm"
-                style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
-              >
-                Our first official single is in production. A powerful introduction to the VELARA sound.
-              </p>
-            </div>
-
-            <div className="music-card p-6">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <div
-                    className="text-[#f0eeec] text-sm"
-                    style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}
-                  >
-                    Coming Soon
-                  </div>
-                  <div
-                    className="text-[#c9956c] text-lg"
-                    style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
-                  >
-                    Debut EP · 2027
-                  </div>
-                </div>
-                <Play size={20} className="text-[#c9956c]/50" />
-              </div>
-              <p
-                className="text-[#f0eeec]/40 text-sm"
-                style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
-              >
-                Four original tracks showcasing the range and artistry of VELARA.
-              </p>
-            </div>
-          </div>
-
-          <Link href="/music">
-            <button className="reveal-hidden btn-velara flex items-center gap-2">
-              Explore Music <ArrowRight size={12} />
-            </button>
-          </Link>
-        </div>
-      </section>
-
-      {/* ── GALLERY SECTION ── */}
-      <section ref={galleryRef} className="py-24 md:py-32 bg-[#0d0d0d]">
-        <div className="container">
-          <div className="mb-14">
-            <span className="section-label reveal-hidden block mb-4">Gallery</span>
-            <h2
-              className="reveal-hidden font-display font-bold italic text-[#f0eeec]"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-              }}
-            >
-              Visual <span className="text-[#c9956c]">World</span>
-            </h2>
-          </div>
-
-          <div className="reveal-hidden grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            <div className="gallery-item h-[300px] md:h-[400px]">
-              <img src={GALLERY_1} alt="VELARA Gallery 1" className="w-full h-full object-cover" />
-              <div className="gallery-overlay">
-                <Play size={40} className="text-[#c9956c]" />
-              </div>
-            </div>
-            <div className="gallery-item h-[300px] md:h-[400px]">
-              <img src={GALLERY_2} alt="VELARA Gallery 2" className="w-full h-full object-cover" />
-              <div className="gallery-overlay">
-                <Play size={40} className="text-[#c9956c]" />
-              </div>
-            </div>
-          </div>
-
-          <Link href="/gallery">
-            <button className="reveal-hidden btn-velara flex items-center gap-2">
-              Full Gallery <ArrowRight size={12} />
-            </button>
-          </Link>
-        </div>
-      </section>
-
-      {/* ── CTA SECTION ── */}
-      <section ref={cta1Ref} className="py-24 md:py-32 bg-[#080808] border-t border-white/5">
-        <div className="container text-center">
-          <span className="section-label reveal-hidden block mb-6">Work With Us</span>
-          <h2
-            className="reveal-hidden font-display font-bold italic text-[#f0eeec] mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(2rem, 4vw, 3.5rem)",
-            }}
-          >
-            Ready to Create{" "}
-            <span className="text-[#c9956c]" style={{ display: "block" }}>
-              Something Extraordinary?
-            </span>
-          </h2>
-          <div className="reveal-hidden velara-line mx-auto w-24 mb-10" />
-          <p
-            className="reveal-hidden text-[#f0eeec]/40 max-w-lg mx-auto mb-10"
-            style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
-          >
-            Whether you're a record label, event organizer, fashion brand, or media company — we'd
-            love to hear from you.
-          </p>
-          <div className="reveal-hidden flex flex-wrap gap-4 justify-center">
-            <Link href="/contact">
-              <button className="btn-velara-filled flex items-center gap-2">
-                Get In Touch <ArrowRight size={12} />
-              </button>
-            </Link>
-            <Link href="/media">
-              <button className="btn-velara">Press Kit</button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-}
+We will update rest of file content in next message due to token limits
