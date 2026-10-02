@@ -48,11 +48,60 @@ export default function Home() {
   const galleryRef = useReveal();
   const cta1Ref = useReveal();
 
+  // Refs & state for gallery videos so users can unmute
+  const gallery1Ref = useRef<HTMLVideoElement | null>(null);
+  const gallery2Ref = useRef<HTMLVideoElement | null>(null);
+  const [g1Muted, setG1Muted] = useState(true);
+  const [g2Muted, setG2Muted] = useState(true);
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const unmuteGallery1 = () => {
+    const v1 = gallery1Ref.current;
+    const v2 = gallery2Ref.current;
+    if (!v1) return;
+    // Pause and mute the other video to avoid multiple audio sources
+    if (v2) {
+      v2.pause();
+      v2.muted = true;
+      setG2Muted(true);
+    }
+    v1.muted = false;
+    v1.play().catch(() => {});
+    setG1Muted(false);
+  };
+
+  const unmuteGallery2 = () => {
+    const v1 = gallery1Ref.current;
+    const v2 = gallery2Ref.current;
+    if (!v2) return;
+    if (v1) {
+      v1.pause();
+      v1.muted = true;
+      setG1Muted(true);
+    }
+    v2.muted = false;
+    v2.play().catch(() => {});
+    setG2Muted(false);
+  };
+
+  const muteGallery1 = () => {
+    const v1 = gallery1Ref.current;
+    if (!v1) return;
+    v1.muted = true;
+    setG1Muted(true);
+  };
+
+  const muteGallery2 = () => {
+    const v2 = gallery2Ref.current;
+    if (!v2) return;
+    v2.muted = true;
+    setG2Muted(true);
+  };
 
   return (
     <div className="bg-[#080808] min-h-screen">
@@ -182,225 +231,4 @@ export default function Home() {
             <h2
               className="reveal-hidden font-display font-bold italic text-[#f0eeec]"
               style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-              }}
-            >
-              Meet <span className="text-[#c9956c]">VELARA</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
-            {[
-              { name: "Angeline", role: "Vocalist & Songwriter" },
-              { name: "Magdalena", role: "Vocalist & Performer" },
-              { name: "Annalisa", role: "Vocalist & Performer" },
-              { name: "Penny", role: "Dancer & Performer" },
-            ].map((member, i) => (
-              <div
-                key={member.name}
-                className="reveal-hidden member-card relative h-[300px] md:h-[400px] overflow-hidden group"
-                style={{ transitionDelay: `${i * 60}ms` }}
-              >
-                <img src={MEMBER_IMGS[i]} alt={member.name} className="w-full h-full object-cover" />
-                <div className="member-overlay" />
-                <div className="member-info">
-                  <div
-                    className="text-[#f0eeec] text-lg md:text-xl"
-                    style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
-                  >
-                    {member.name}
-                  </div>
-                  <div
-                    className="member-bio text-[#c9956c] text-xs md:text-sm"
-                    style={{ fontFamily: "'Montserrat', sans-serif", letterSpacing: "0.1em", fontWeight: 200 }}
-                  >
-                    {member.role}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <Link href="/members">
-            <button className="reveal-hidden btn-velara flex items-center gap-2">
-              All Members <ArrowRight size={12} />
-            </button>
-          </Link>
-        </div>
-      </section>
-
-      <section ref={musicRef} className="py-24 md:py-32 bg-[#080808]">
-        <div className="container">
-          <div className="mb-14">
-            <span className="section-label reveal-hidden block mb-4">Music</span>
-            <h2
-              className="reveal-hidden font-display font-bold italic text-[#f0eeec]"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-              }}
-            >
-              The Sound of <span className="text-[#c9956c]">VELARA</span>
-            </h2>
-          </div>
-
-          <div className="reveal-hidden grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-            <div className="music-card p-6">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <div
-                    className="text-[#f0eeec] text-sm"
-                    style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}
-                  >
-                    Coming Soon
-                  </div>
-                  <div
-                    className="text-[#c9956c] text-lg"
-                    style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
-                  >
-                    Debut Single · October 2026
-                  </div>
-                </div>
-                <Play size={20} className="text-[#c9956c]/50" />
-              </div>
-              <p
-                className="text-[#f0eeec]/40 text-sm"
-                style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
-              >
-                Our first official single is in production. A powerful introduction to the VELARA sound.
-              </p>
-            </div>
-
-            <div className="music-card p-6">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <div
-                    className="text-[#f0eeec] text-sm"
-                    style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}
-                  >
-                    Coming Soon
-                  </div>
-                  <div
-                    className="text-[#c9956c] text-lg"
-                    style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
-                  >
-                    Debut EP · 2027
-                  </div>
-                </div>
-                <Play size={20} className="text-[#c9956c]/50" />
-              </div>
-              <p
-                className="text-[#f0eeec]/40 text-sm"
-                style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
-              >
-                Four original tracks showcasing the range and artistry of VELARA.
-              </p>
-            </div>
-          </div>
-
-          <Link href="/music">
-            <button className="reveal-hidden btn-velara flex items-center gap-2">
-              Explore Music <ArrowRight size={12} />
-            </button>
-          </Link>
-        </div>
-      </section>
-
-      <section ref={galleryRef} className="py-24 md:py-32 bg-[#0d0d0d]">
-        <div className="container">
-          <div className="mb-14">
-            <span className="section-label reveal-hidden block mb-4">Gallery</span>
-            <h2
-              className="reveal-hidden font-display font-bold italic text-[#f0eeec]"
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-              }}
-            >
-              Visual <span className="text-[#c9956c]">World</span>
-            </h2>
-          </div>
-
-          <div className="reveal-hidden grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            <div className="gallery-item h-[300px] md:h-[400px] overflow-hidden">
-              <video
-                className="w-full h-full object-cover"
-                muted
-                autoPlay
-                loop
-                playsInline
-                preload="metadata"
-                poster="https://res.cloudinary.com/anjpczrc/image/upload/v1790581387/copy_of_copy_offf_20260925_100344.jpg"
-              >
-                <source src={GALLERY_1} type="video/mp4" />
-              </video>
-              <div className="gallery-overlay">
-                <Play size={40} className="text-[#c9956c]" />
-              </div>
-            </div>
-            <div className="gallery-item h-[300px] md:h-[400px] overflow-hidden">
-              <video
-                className="w-full h-full object-cover"
-                muted
-                autoPlay
-                loop
-                playsInline
-                preload="metadata"
-                poster="https://res.cloudinary.com/anjpczrc/image/upload/v1790581387/copy_of_copy_offf_20260925_100344.jpg"
-              >
-                <source src={GALLERY_2} type="video/mp4" />
-              </video>
-              <div className="gallery-overlay">
-                <Play size={40} className="text-[#c9956c]" />
-              </div>
-            </div>
-          </div>
-
-          <Link href="/gallery">
-            <button className="reveal-hidden btn-velara flex items-center gap-2">
-              Full Gallery <ArrowRight size={12} />
-            </button>
-          </Link>
-        </div>
-      </section>
-
-      <section ref={cta1Ref} className="py-24 md:py-32 bg-[#080808] border-t border-white/5">
-        <div className="container text-center">
-          <span className="section-label reveal-hidden block mb-6">Work With Us</span>
-          <h2
-            className="reveal-hidden font-display font-bold italic text-[#f0eeec] mb-6"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(2rem, 4vw, 3.5rem)",
-            }}
-          >
-            Ready to Create{" "}
-            <span className="text-[#c9956c]" style={{ display: "block" }}>
-              Something Extraordinary?
-            </span>
-          </h2>
-          <div className="reveal-hidden velara-line mx-auto w-24 mb-10" />
-          <p
-            className="reveal-hidden text-[#f0eeec]/40 max-w-lg mx-auto mb-10"
-            style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
-          >
-            Whether you're a record label, event organizer, fashion brand, or media company — we'd love to hear from you.
-          </p>
-          <div className="reveal-hidden flex flex-wrap gap-4 justify-center">
-            <Link href="/contact">
-              <button className="btn-velara-filled flex items-center gap-2">
-                Get In Touch <ArrowRight size={12} />
-              </button>
-            </Link>
-            <Link href="/media">
-              <button className="btn-velara">Press Kit</button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-}
+We will update rest of file in next message due to token limits
