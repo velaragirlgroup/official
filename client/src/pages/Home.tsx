@@ -48,7 +48,6 @@ export default function Home() {
   const galleryRef = useReveal();
   const cta1Ref = useReveal();
 
-  // Refs & state for gallery videos so users can unmute
   const gallery1Ref = useRef<HTMLVideoElement | null>(null);
   const gallery2Ref = useRef<HTMLVideoElement | null>(null);
   const [g1Muted, setG1Muted] = useState(true);
@@ -104,11 +103,7 @@ export default function Home() {
 
   return (
     <div className="bg-[#080808] min-h-screen">
-      <PageSEO
-        title="Home"
-        description="VELARA is an afro girl group from Namibia creating music for a global audience."
-        image={HERO_IMG}
-      />
+      <PageSEO title="Home" description="VELARA is an afro girl group from Namibia creating music for a global audience." image={HERO_IMG} />
       <Navigation />
 
       {/* ── HERO SECTION ── */}
@@ -119,10 +114,7 @@ export default function Home() {
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
           <div className="container relative z-10">
-            <span
-              className="section-label block mb-6 animate-fade-up"
-              style={{ fontFamily: "'Montserrat', sans-serif" }}
-            >
+            <span className="section-label block mb-6 animate-fade-up" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               Welcome to VELARA
             </span>
             <h1
@@ -132,7 +124,7 @@ export default function Home() {
                 fontSize: "clamp(3.5rem, 10vw, 7rem)",
               }}
             >
-              Four Voices.{" "}
+              Four Voices. {" "}
               <span className="text-[#c9956c]" style={{ display: "block" }}>
                 One Vision.
               </span>
@@ -159,13 +151,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ChevronDown size={24} className="text-[#c9956c]" />
         </div>
       </section>
 
-      {/* ── MARQUEE SECTION ── */}
       <section className="py-8 bg-[#0d0d0d] overflow-hidden border-y border-white/5">
         <div className="flex whitespace-nowrap animate-marquee">
           {[...Array(6)].map((_, i) => (
@@ -180,7 +170,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── OUR STORY SECTION ── */}
       <section ref={storyRef} className="py-24 md:py-32 bg-[#080808]">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -203,8 +192,8 @@ export default function Home() {
                 className="reveal-hidden text-[#f0eeec]/50 leading-relaxed mb-8"
                 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
               >
-                VELARA is a four-member female group from Namibia. We create progressive afro music that blends strong melodies, 
-                polished performances, and authentic storytelling with our African roots. Our goal is simple: to create music that 
+                VELARA is a four-member female group from Namibia. We create progressive afro music that blends strong melodies,
+                polished performances, and authentic storytelling with our African roots. Our goal is simple: to create music that
                 connects with audiences everywhere while proudly representing where we come from.
               </p>
               <p
@@ -220,16 +209,11 @@ export default function Home() {
                 </button>
               </Link>
             </div>
-            <img
-              src={ABOUT_IMG}
-              alt="VELARA Story"
-              className="reveal-hidden w-full h-[500px] object-cover"
-            />
+            <img src={ABOUT_IMG} alt="VELARA Story" className="reveal-hidden w-full h-[500px] object-cover" />
           </div>
         </div>
       </section>
 
-      {/* ── MEMBERS SECTION ── */}
       <section ref={membersRef} className="py-24 md:py-32 bg-[#0d0d0d]">
         <div className="container">
           <div className="mb-14">
@@ -285,7 +269,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── MUSIC SECTION ── */}
       <section ref={musicRef} className="py-24 md:py-32 bg-[#080808]">
         <div className="container">
           <div className="mb-14">
@@ -305,25 +288,16 @@ export default function Home() {
             <div className="music-card p-6">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <div
-                    className="text-[#f0eeec] text-sm"
-                    style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}
-                  >
+                  <div className="text-[#f0eeec] text-sm" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}>
                     Coming Soon
                   </div>
-                  <div
-                    className="text-[#c9956c] text-lg"
-                    style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
-                  >
+                  <div className="text-[#c9956c] text-lg" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
                     Debut Single · November 2026
                   </div>
                 </div>
                 <Play size={20} className="text-[#c9956c]/50" />
               </div>
-              <p
-                className="text-[#f0eeec]/40 text-sm"
-                style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
-              >
+              <p className="text-[#f0eeec]/40 text-sm" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}>
                 Our first official single is in production. A powerful introduction to the VELARA sound.
               </p>
             </div>
@@ -331,25 +305,16 @@ export default function Home() {
             <div className="music-card p-6">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <div
-                    className="text-[#f0eeec] text-sm"
-                    style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}
-                  >
+                  <div className="text-[#f0eeec] text-sm" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}>
                     Coming Soon
                   </div>
-                  <div
-                    className="text-[#c9956c] text-lg"
-                    style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
-                  >
+                  <div className="text-[#c9956c] text-lg" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
                     Debut EP · 2027
                   </div>
                 </div>
                 <Play size={20} className="text-[#c9956c]/50" />
               </div>
-              <p
-                className="text-[#f0eeec]/40 text-sm"
-                style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
-              >
+              <p className="text-[#f0eeec]/40 text-sm" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}>
                 Four original tracks showcasing the range and artistry of VELARA.
               </p>
             </div>
@@ -363,7 +328,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── GALLERY SECTION ── */}
       <section ref={galleryRef} className="py-24 md:py-32 bg-[#0d0d0d]">
         <div className="container">
           <div className="mb-14">
@@ -463,7 +427,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CTA SECTION ── */}
       <section ref={cta1Ref} className="py-24 md:py-32 bg-[#080808] border-t border-white/5">
         <div className="container text-center">
           <span className="section-label reveal-hidden block mb-6">Work With Us</span>
