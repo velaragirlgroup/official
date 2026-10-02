@@ -7,16 +7,16 @@ import Navigation from "@/components/Navigation";
 import PageSEO from "@/components/PageSEO";
 import Footer from "@/components/Footer";
 
-const HERO_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790532190/copy_of_copy_of_20260925_095531.jpg";
-const ABOUT_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790504267/IMG_9618_1_1_1_2.jpg";
+const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_hero_main-6VKafWfFYMoFtjwM7Je8kc.webp";
+const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_about_image-UBFngBNUeszp4fnAGUQSdu.webp";
 const MEMBER_IMGS = [
-  "https://res.cloudinary.com/anjpczrc/image/upload/v1790598562/copy_of_copy_of_20260927_070726.jpg",
+  "https://res.cloudinary.com/anjpczrc/image/upload/v1790529085/20260927_070726.jpg",
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504342/IMG_9632_1.jpg",
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504364/IMG_9638_1.jpg",
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504295/20260925_043652.jpg",
 ];
 const GALLERY_1 = "https://res.cloudinary.com/anjpczrc/video/upload/v1790941834/VID_20261002094616617.mp4";
-const GALLERY_2 = "https://res.cloudinary.com/anjpczrc/image/upload/v1790581387/copy_of_copy_offf_20260925_100344.jpg";
+const GALLERY_2 = "https://res.cloudinary.com/anjpczrc/video/upload/v1790941740/VID_20261002134330075.mp4";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -53,9 +53,6 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Helper to detect video URLs (Cloudinary video uploads include '/video/upload/')
-  const isVideoUrl = (url: string) => /\.(mp4|webm|ogg)(\?.*)?$/.test(url) || url.includes("/video/upload/");
 
   return (
     <div className="bg-[#080808] min-h-screen">
@@ -97,7 +94,6 @@ export default function Home() {
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1.1rem" }}
             >
               An afro girl group from Namibia creating music for a global audience.
-
             </p>
             <div className="flex flex-wrap gap-4 justify-center animate-fade-up delay-400">
               <Link href="/music">
@@ -115,13 +111,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ChevronDown size={24} className="text-[#c9956c]" />
         </div>
       </section>
 
-      {/* ── MARQUEE SECTION ── */}
       <section className="py-8 bg-[#0d0d0d] overflow-hidden border-y border-white/5">
         <div className="flex whitespace-nowrap animate-marquee">
           {[...Array(6)].map((_, i) => (
@@ -136,7 +130,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── OUR STORY SECTION ── */}
       <section ref={storyRef} className="py-24 md:py-32 bg-[#080808]">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -159,16 +152,13 @@ export default function Home() {
                 className="reveal-hidden text-[#f0eeec]/50 leading-relaxed mb-8"
                 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
               >
-                VELARA is a four-member female group from Namibia. We create progressive afro music that blends strong melodies, 
-                polished performances, and authentic storytelling with our African roots. Our goal is simple: to create music that 
-                connects with audiences everywhere while proudly representing where we come from.
+                VELARA is a four-member female group from Namibia. We create progressive afro music that blends strong melodies, polished performances, and authentic storytelling with our African roots. Our goal is simple: to create music that connects with audiences everywhere while proudly representing where we come from.
               </p>
               <p
                 className="reveal-hidden text-[#f0eeec]/40 leading-relaxed mb-10"
                 style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
               >
-                VELARA represents confidence, unity, and artistic ambition. Every song, performance and visual is created
-                with intention, reflecting the identity we are building as artists.
+                VELARA represents confidence, unity, and artistic ambition. Every song, performance and visual is created with intention, reflecting the identity we are building as artists.
               </p>
               <Link href="/about">
                 <button className="reveal-hidden btn-velara flex items-center gap-2">
@@ -185,7 +175,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── MEMBERS SECTION ── */}
       <section ref={membersRef} className="py-24 md:py-32 bg-[#0d0d0d]">
         <div className="container">
           <div className="mb-14">
@@ -233,4 +222,185 @@ export default function Home() {
             ))}
           </div>
 
-We will update rest of file content in next message due to token limits
+          <Link href="/members">
+            <button className="reveal-hidden btn-velara flex items-center gap-2">
+              All Members <ArrowRight size={12} />
+            </button>
+          </Link>
+        </div>
+      </section>
+
+      <section ref={musicRef} className="py-24 md:py-32 bg-[#080808]">
+        <div className="container">
+          <div className="mb-14">
+            <span className="section-label reveal-hidden block mb-4">Music</span>
+            <h2
+              className="reveal-hidden font-display font-bold italic text-[#f0eeec]"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: "clamp(2rem, 4vw, 3rem)",
+              }}
+            >
+              The Sound of <span className="text-[#c9956c]">VELARA</span>
+            </h2>
+          </div>
+
+          <div className="reveal-hidden grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <div className="music-card p-6">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <div
+                    className="text-[#f0eeec] text-sm"
+                    style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}
+                  >
+                    Coming Soon
+                  </div>
+                  <div
+                    className="text-[#c9956c] text-lg"
+                    style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+                  >
+                    Debut Single · October 2026
+                  </div>
+                </div>
+                <Play size={20} className="text-[#c9956c]/50" />
+              </div>
+              <p
+                className="text-[#f0eeec]/40 text-sm"
+                style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
+              >
+                Our first official single is in production. A powerful introduction to the VELARA sound.
+              </p>
+            </div>
+
+            <div className="music-card p-6">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <div
+                    className="text-[#f0eeec] text-sm"
+                    style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}
+                  >
+                    Coming Soon
+                  </div>
+                  <div
+                    className="text-[#c9956c] text-lg"
+                    style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
+                  >
+                    Debut EP · 2027
+                  </div>
+                </div>
+                <Play size={20} className="text-[#c9956c]/50" />
+              </div>
+              <p
+                className="text-[#f0eeec]/40 text-sm"
+                style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
+              >
+                Four original tracks showcasing the range and artistry of VELARA.
+              </p>
+            </div>
+          </div>
+
+          <Link href="/music">
+            <button className="reveal-hidden btn-velara flex items-center gap-2">
+              Explore Music <ArrowRight size={12} />
+            </button>
+          </Link>
+        </div>
+      </section>
+
+      <section ref={galleryRef} className="py-24 md:py-32 bg-[#0d0d0d]">
+        <div className="container">
+          <div className="mb-14">
+            <span className="section-label reveal-hidden block mb-4">Gallery</span>
+            <h2
+              className="reveal-hidden font-display font-bold italic text-[#f0eeec]"
+              style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: "clamp(2rem, 4vw, 3rem)",
+              }}
+            >
+              Visual <span className="text-[#c9956c]">World</span>
+            </h2>
+          </div>
+
+          <div className="reveal-hidden grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div className="gallery-item h-[300px] md:h-[400px] overflow-hidden">
+              <video
+                className="w-full h-full object-cover"
+                muted
+                autoPlay
+                loop
+                playsInline
+                preload="metadata"
+                poster="https://res.cloudinary.com/anjpczrc/image/upload/v1790581387/copy_of_copy_offf_20260925_100344.jpg"
+              >
+                <source src={GALLERY_1} type="video/mp4" />
+              </video>
+              <div className="gallery-overlay">
+                <Play size={40} className="text-[#c9956c]" />
+              </div>
+            </div>
+            <div className="gallery-item h-[300px] md:h-[400px] overflow-hidden">
+              <video
+                className="w-full h-full object-cover"
+                muted
+                autoPlay
+                loop
+                playsInline
+                preload="metadata"
+                poster="https://res.cloudinary.com/anjpczrc/image/upload/v1790581387/copy_of_copy_offf_20260925_100344.jpg"
+              >
+                <source src={GALLERY_2} type="video/mp4" />
+              </video>
+              <div className="gallery-overlay">
+                <Play size={40} className="text-[#c9956c]" />
+              </div>
+            </div>
+          </div>
+
+          <Link href="/gallery">
+            <button className="reveal-hidden btn-velara flex items-center gap-2">
+              Full Gallery <ArrowRight size={12} />
+            </button>
+          </Link>
+        </div>
+      </section>
+
+      <section ref={cta1Ref} className="py-24 md:py-32 bg-[#080808] border-t border-white/5">
+        <div className="container text-center">
+          <span className="section-label reveal-hidden block mb-6">Work With Us</span>
+          <h2
+            className="reveal-hidden font-display font-bold italic text-[#f0eeec] mb-6"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontSize: "clamp(2rem, 4vw, 3.5rem)",
+            }}
+          >
+            Ready to Create{" "}
+            <span className="text-[#c9956c]" style={{ display: "block" }}>
+              Something Extraordinary?
+            </span>
+          </h2>
+          <div className="reveal-hidden velara-line mx-auto w-24 mb-10" />
+          <p
+            className="reveal-hidden text-[#f0eeec]/40 max-w-lg mx-auto mb-10"
+            style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
+          >
+            Whether you're a record label, event organizer, fashion brand, or media company — we'd love to hear from you.
+          </p>
+          <div className="reveal-hidden flex flex-wrap gap-4 justify-center">
+            <Link href="/contact">
+              <button className="btn-velara-filled flex items-center gap-2">
+                Get In Touch <ArrowRight size={12} />
+              </button>
+            </Link>
+            <Link href="/media">
+              <button className="btn-velara">Press Kit</button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
