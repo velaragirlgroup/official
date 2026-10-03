@@ -102,9 +102,9 @@ export default function Music() {
               className="text-[#f0eeec]/50 leading-relaxed text-lg"
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
             >
-            VELARA creates modern afro music rooted in Namibia and shaped by a global perspective. Our sound blends progressive afropop with contemporary dance and African influences, bringing together four voices, distinct personalities, and a shared creative vision.
+            VELARA creates modern afro music rooted in Namibia and shaped by a global perspective. Our sound blends progressive afropop with contemporary dance and African influences, bringing to[...]
 
-We sing in English and Rukwangali, connecting our cultural identity with the sounds and influences that inspire us from around the world. Every song is an opportunity to tell a story, express who we are, and create music that can travel beyond borders.
+We sing in English and Rukwangali, connecting our cultural identity with the sounds and influences that inspire us from around the world. Every song is an opportunity to tell a story, express who[...]
 
             </p>
           </div>
@@ -190,11 +190,9 @@ We sing in English and Rukwangali, connecting our cultural identity with the sou
               <a
                 key={platform.name}
                 href={platform.url}
-                onClick={(e) => {
-                  e.preventDefault();
-                  toast.info(`${platform.name} links coming soon!`);
-                }}
-                className="reveal-hidden border border-white/5 p-6 text-center hover:border-[#c9956c]/30 transition-colors cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="reveal-hidden border border-white/5 p-6 text-center hover:border-[#c9956c]/30 transition-colors"
                 style={{ transitionDelay: `${i * 50}ms` }}
               >
                 <div
@@ -229,7 +227,7 @@ We sing in English and Rukwangali, connecting our cultural identity with the sou
               className="reveal-hidden text-[#f0eeec]/50 leading-relaxed mb-6"
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
             >
-              Our debut EP is in production and will feature four original tracks that showcase the full range of VELARA's artistry. Each song tells a unique story while maintaining the cohesive vision that defines our sound.
+              Our debut EP is in production and will feature four original tracks that showcase the full range of VELARA's artistry. Each song tells a unique story while maintaining the cohesive [...]
             </p>
             <p
               className="reveal-hidden text-[#f0eeec]/40 leading-relaxed"
