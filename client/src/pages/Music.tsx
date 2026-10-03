@@ -16,13 +16,13 @@ const songs = [
     artist: "VELARA",
     duration: "2:13",
     genre: "Progressive Afropop/Dance",
-    status: "October 2026",
+    status: "2026",
   },
   {
     title: "Untitled Track 2",
     artist: "VELARA",
     duration: "2:15",
-    genre: "Progressive Afropop/Afro House",
+    genre: "Afro House/Progressive Afropop",
     status: "2027",
   },
   {
