@@ -186,24 +186,42 @@ We sing in English and Rukwangali, connecting our cultural identity with the sou
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {platforms.map((platform, i) => (
-              <a
-                key={platform.name}
-                href={platform.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="reveal-hidden border border-white/5 p-6 text-center hover:border-[#c9956c]/30 transition-colors"
-                style={{ transitionDelay: `${i * 50}ms` }}
-              >
-                <div
-                  className="text-[#f0eeec]/60 text-sm flex items-center justify-center gap-2 hover:text-[#c9956c] transition-colors"
-                  style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}
+            {platforms.map((platform, i) => {
+              const isLive = platform.name === "SoundCloud";
+              return isLive ? (
+                <a
+                  key={platform.name}
+                  href={platform.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="reveal-hidden border border-white/5 p-6 text-center hover:border-[#c9956c]/30 transition-colors"
+                  style={{ transitionDelay: `${i * 50}ms` }}
                 >
-                  {platform.name}
-                  <ExternalLink size={12} />
-                </div>
-              </a>
-            ))}
+                  <div
+                    className="text-[#f0eeec]/60 text-sm flex items-center justify-center gap-2 hover:text-[#c9956c] transition-colors"
+                    style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}
+                  >
+                    {platform.name}
+                    <ExternalLink size={12} />
+                  </div>
+                </a>
+              ) : (
+                <button
+                  key={platform.name}
+                  onClick={() => toast.info(`${platform.name} links coming soon!`)}
+                  className="reveal-hidden border border-white/5 p-6 text-center hover:border-[#c9956c]/30 transition-colors"
+                  style={{ transitionDelay: `${i * 50}ms` }}
+                >
+                  <div
+                    className="text-[#f0eeec]/60 text-sm flex items-center justify-center gap-2 hover:text-[#c9956c] transition-colors"
+                    style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}
+                  >
+                    {platform.name}
+                    <ExternalLink size={12} />
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
