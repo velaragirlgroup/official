@@ -16,7 +16,7 @@ const MEMBER_IMGS = [
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504295/20260925_043652.jpg",
 ];
 const GALLERY_1 = "https://res.cloudinary.com/anjpczrc/video/upload/v1791027065/VELARA_cinematic_walk_edit_member4_shortened.mp4";
-const GALLERY_2 = "https://res.cloudinary.com/anjpczrc/video/upload/v1790941740/VID_20261002134330075.mp4";
+const GALLERY_2 = "https://res.cloudinary.com/anjpczrc/video/upload/v1791032598/Angeline_VELARA_Welcome_YouTube_16x9.mp4";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
