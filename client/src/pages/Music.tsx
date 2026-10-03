@@ -21,25 +21,25 @@ const songs = [
   {
     title: "Untitled Track 2",
     artist: "VELARA",
-    duration: "2:15",
+    duration: "TBA",
     genre: "Afro House/Progressive Afropop",
     status: "2027",
   },
   {
     title: "Untitled Track 3",
     artist: "VELARA",
-    duration: "2:28",
+    duration: "TBA",
     genre: "Progressive Afropop",
     status: "2027",
   },
 ];
 
 const platforms = [
-  { name: "Spotify", url: "#" },
-  { name: "Apple Music", url: "#" },
-  { name: "YouTube Music", url: "#" },
-  { name: "Amazon Music", url: "#" },
-  { name: "Tidal", url: "#" },
+  { name: "Spotify", url: "https://open.spotify.com" },
+  { name: "Apple Music", url: "https://music.apple.com" },
+  { name: "YouTube Music", url: "https://music.youtube.com" },
+  { name: "Amazon Music", url: "https://music.amazon.com" },
+  { name: "Tidal", url: "https://tidal.com" },
   { name: "SoundCloud", url: "https://soundcloud.com/velaragroup" },
 ];
 
