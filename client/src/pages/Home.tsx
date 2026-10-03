@@ -15,7 +15,7 @@ const MEMBER_IMGS = [
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504364/IMG_9638_1.jpg",
   "https://res.cloudinary.com/anjpczrc/image/upload/v1790504295/20260925_043652.jpg",
 ];
-const GALLERY_1 = "https://res.cloudinary.com/anjpczrc/video/upload/v1790941834/VID_20261002094616617.mp4";
+const GALLERY_1 = "https://res.cloudinary.com/anjpczrc/video/upload/v1791027065/VELARA_cinematic_walk_edit_member4_shortened.mp4";
 const GALLERY_2 = "https://res.cloudinary.com/anjpczrc/video/upload/v1790941740/VID_20261002134330075.mp4";
 
 function useReveal() {
