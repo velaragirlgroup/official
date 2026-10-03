@@ -101,7 +101,7 @@ export default function Media() {
                 fontSize: "clamp(2rem, 4vw, 3rem)",
               }}
             >
-              In the <span className="text-[#c9956c]">Press</span>
+              For the <span className="text-[#c9956c]">Media</span>
             </h2>
           </div>
 
