@@ -13,22 +13,22 @@ const HERO_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790532190/c
 
 const articles = [
   {
-    title: "VELARA: The Future of African Pop",
-    publication: "Music Industry Weekly",
-    date: "Coming Soon",
-    excerpt: "An in-depth feature on VELARA's vision and impact on the global music scene.",
+    title: "VELARA: Official Biography",
+    publication: "Official Media Information",
+    date: "VELARA",
+    excerpt: "VELARA is a four-member female group from Namibia creating progressive Afro music rooted in Namibia and shaped by a global perspective.",
   },
   {
-    title: "Four Voices, One Vision: Inside VELARA",
-    publication: "African Artists Magazine",
-    date: "Coming Soon",
-    excerpt: "An exclusive interview with the members of VELARA about their journey and aspirations.",
+    title: "VELARA: Our Story",
+    publication: "Artist Information",
+    date: "VELARA",
+    excerpt: "Four females. Four voices. One shared vision. Discover VELARA's journey, Namibian roots, musical direction, and vision for connecting with audiences around the world.",
   },
   {
-    title: "Namibia's Rising Stars: VELARA",
-    publication: "Global Music News",
-    date: "Coming Soon",
-    excerpt: "How VELARA is putting Namibia on the map in the international music industry.",
+    title: "Media & Interview Enquiries",
+    publication: "Press Contact",
+    date: "VELARA",
+    excerpt: "VELARA welcomes enquiries from journalists, broadcasters, publications, music platforms, and other media professionals. For interviews, features, and other media enquiries, contact us at velaragirlgroup@gmail.com.",
   },
 ];
 
