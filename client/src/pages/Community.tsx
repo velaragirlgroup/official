@@ -7,7 +7,7 @@ import PageSEO from "@/components/PageSEO";
 import { Heart, Send, Star, ShoppingBag } from "lucide-react";
 import { toast } from "sonner";
 
-const HERO_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790532190/copy_of_copy_of_20260925_095531.jpg";
+const HERO_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790569108/copy_of_20260925_100344.jpg";
 const GALLERY_2 = "https://res.cloudinary.com/anjpczrc/image/upload/v1790532190/copy_of_copy_of_20260925_095531.jpg";
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xnpawwaj";
 
