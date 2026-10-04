@@ -13,40 +13,40 @@ const FORMSPREE_ENDPOINT = "https://formspree.io/f/xnpawwaj";
 
 const fanMessages = [
   {
-    name: "Amahle K.",
-    location: "Johannesburg, SA",
-    message: "VELARA is exactly what Africa needed. Four queens representing us on the world stage. I'm so proud!",
-    initials: "AK",
+    name: "BE HERE FROM THE BEGINNING",
+    location: "",
+    message: "Follow VELARA's journey as we prepare to share our debut music with the world.",
+    initials: "BH",
   },
   {
-    name: "Precious N.",
-    location: "Windhoek, Namibia",
-    message: "Seeing Namibian girls shine like this gives me so much hope. VELARA, you are our pride!",
-    initials: "PN",
+    name: "MEET THE MEMBERS",
+    location: "",
+    message: "Get to know the four voices and personalities behind VELARA.",
+    initials: "MM",
   },
   {
-    name: "Fatima O.",
-    location: "Lagos, Nigeria",
-    message: "The elegance, the talent, the vision — VELARA is not just a group, they're a movement. Can't wait for the music!",
-    initials: "FO",
+    name: "MUSIC IS COMING",
+    location: "",
+    message: "Our debut single is planned for 2026, followed by more original music and our debut EP in 2027.",
+    initials: "MI",
   },
   {
-    name: "Zanele M.",
-    location: "Cape Town, SA",
-    message: "I discovered VELARA last week and I'm already obsessed. The aesthetic alone is everything!",
-    initials: "ZM",
+    name: "BEHIND THE SCENES",
+    location: "",
+    message: "Follow our rehearsals, recordings, performances and the creative journey behind VELARA.",
+    initials: "BS",
   },
   {
-    name: "Kefilwe B.",
-    location: "Gaborone, Botswana",
-    message: "Southern Africa is rising and VELARA is leading the way. So beautiful, so talented, so powerful!",
-    initials: "KB",
+    name: "NAMIBIA TO THE WORLD",
+    location: "",
+    message: "Follow our journey as we share our Namibian identity, languages and music with audiences around the world.",
+    initials: "NT",
   },
   {
-    name: "Yemi A.",
-    location: "London, UK",
-    message: "As an African living abroad, VELARA makes me feel represented and proud. This is the global Africa I know!",
-    initials: "YA",
+    name: "BECOME A VELITE",
+    location: "",
+    message: "Follow VELARA on social media and become part of our community from the beginning.",
+    initials: "BV",
   },
 ];
 
@@ -255,7 +255,7 @@ export default function Community() {
       <section ref={messagesRef} className="py-24 md:py-32 bg-[#0d0d0d]">
         <div className="container">
           <div className="mb-14">
-            <span className="section-label reveal-hidden block mb-4">Fan Love</span>
+            <span className="section-label reveal-hidden block mb-4">VELITES</span>
             <h2
               className="reveal-hidden font-display font-bold italic text-[#f0eeec]"
               style={{
@@ -263,7 +263,7 @@ export default function Community() {
                 fontSize: "clamp(2rem, 4vw, 3rem)",
               }}
             >
-              What Fans Are <span className="text-[#c9956c]">Saying</span>
+              Join the <span className="text-[#c9956c]">VELARA Community</span>
             </h2>
           </div>
 
