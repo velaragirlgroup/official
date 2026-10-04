@@ -14,7 +14,7 @@ const galleryItems = [
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504267/IMG_9618_1_1_1_2.jpg", category: "Editorial", title: "VELARA Group Portrait #2" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790508638/20260925_100344.jpg", category: "Editorial", title: "VELARA Group Portrait #3" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504299/20260925_085814.jpg", category: "Editorial", title: "VELARA Group Portrait #4" },
-  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504322/20260925_053959.jpg", category: "Portrait", title: "Individual Portrait #1" },
+  { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1791121163/BeautyPlus_20261004153749220_save.jpg", category: "Portrait", title: "Individual Portrait #1" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504358/IMG_9640_1.jpg", category: "Portrait", title: "Individual Portrait #2" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790504341/IMG_9635_1.jpg", category: "Portrait", title: "Individual Portrait #3" },
   { img: "https://res.cloudinary.com/anjpczrc/image/upload/v1790508404/20260925_042343.jpg", category: "Editorial", title: "VELARA Group Portrait #5" },
