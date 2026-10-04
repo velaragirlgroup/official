@@ -247,7 +247,11 @@ export default function Music() {
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
             >
               VELARA’s debut EP is set for 2027 and will feature four original tracks exploring different sides of our sound. From progressive Afropop to Afro-house and dance influences, the project will bring together our four voices, languages and creative ideas as we begin defining the VELARA sound.
-
+            </p>
+            <p
+              className="reveal-hidden text-[#f0eeec]/50 leading-relaxed mt-4"
+              style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
+            >
               More details, including the EP title, tracklist and release date, will be announced as the project develops.
             </p>
           </div>
