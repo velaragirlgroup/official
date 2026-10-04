@@ -22,7 +22,7 @@ const articles = [
     title: "VELARA: Our Story",
     publication: "Artist Information",
     date: "VELARA",
-    excerpt: "Four girls. Four voices. One shared vision. Discover VELARA's journey, Namibian roots, musical direction, and vision for connecting with audiences around the world.",
+    excerpt: "Four members. Four voices. One shared vision. Discover VELARA's journey, Namibian roots, musical direction, and vision for connecting with audiences around the world.",
   },
   {
     title: "Media & Interview Enquiries",
