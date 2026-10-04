@@ -22,7 +22,7 @@ const songs = [
     title: "Untitled Track 2",
     artist: "VELARA",
     duration: "TBA",
-    genre: "Afro House/Progressive Afropop",
+    genre: "Afro House",
     status: "2027",
   },
   {
