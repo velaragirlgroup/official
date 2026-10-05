@@ -8,8 +8,13 @@ import { Instagram, Twitter, Youtube, Facebook, Music2, Send } from "lucide-reac
 import { toast } from "sonner";
 
 const MUSIC_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_music_bg-WtMtnLGFSA85b5NP4daeDs.webp";
-
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xnpawwaj";
+
+const TikTokIcon = ({ size = 20 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M14.5 3c.5 1.5 1.6 2.6 3.2 3.1v2.7a6.9 6.9 0 0 1-3.2-1v7.6a5.5 5.5 0 1 1-5.5-5.5c.4 0 .8 0 1.2.1v2.8a3 3 0 1 0 1.8 2.7V3h3.5Z" fill="currentColor"/>
+  </svg>
+);
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,12 +37,12 @@ function useReveal() {
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-  name: "",
-  email: "",
-  company: "",
-  type: "",
-  message: "",
-});
+    name: "",
+    email: "",
+    company: "",
+    type: "",
+    message: "",
+  });
   const [submitting, setSubmitting] = useState(false);
   const formRef = useReveal();
   const socialRef = useReveal();
@@ -47,36 +52,36 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setSubmitting(true);
+    e.preventDefault();
+    setSubmitting(true);
 
-  try {
-    const res = await fetch(FORMSPREE_ENDPOINT, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (!res.ok) {
-      const data = await res.json().catch(() => null);
-      const msg = data?.error || data?.message || "Failed to send message";
-      throw new Error(msg);
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        const msg = data?.error || data?.message || "Failed to send message";
+        throw new Error(msg);
+      }
+
+      toast.success("Message sent!", {
+        description: "Thank you for reaching out. We'll be in touch soon.",
+      });
+      setFormData({ name: "", email: "", company: "", type: "", message: "" });
+    } catch (err) {
+      console.error("Formspree error:", err);
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
+      setSubmitting(false);
     }
-
-    toast.success("Message sent!", {
-      description: "Thank you for reaching out. We'll be in touch soon.",
-    });
-    setFormData({ name: "", email: "", company: "", type: "", message: "" });
-  } catch (err) {
-    console.error("Formspree error:", err);
-    toast.error("Failed to send message. Please try again later.");
-  } finally {
-    setSubmitting(false);
-  }
-};
+  };
 
   return (
     <div className="bg-[#080808] min-h-screen">
@@ -265,6 +270,7 @@ export default function Contact() {
               { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/@velaragirlgroup" },
               { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/velaragroup" },
               { name: "Spotify", icon: Music2, url: "https://open.spotify.com" },
+              { name: "TikTok", icon: TikTokIcon, url: "https://www.tiktok.com/@velaragroup" },
             ].map((social, i) => {
               const Icon = social.icon;
               return (
@@ -274,6 +280,8 @@ export default function Contact() {
                   className="reveal-hidden social-icon"
                   style={{ transitionDelay: `${i * 60}ms` }}
                   title={social.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Icon size={20} />
                 </a>
