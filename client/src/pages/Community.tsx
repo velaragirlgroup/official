@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
-import { Heart, Send, Star, ShoppingBag } from "lucide-react";
+import { Heart, Send, ShoppingBag } from "lucide-react";
 import { toast } from "sonner";
 
 const HERO_IMG = "https://res.cloudinary.com/anjpczrc/image/upload/v1790569108/copy_of_20260925_100344.jpg";
@@ -299,11 +299,6 @@ export default function Community() {
                     >
                       {msg.location}
                     </div>
-                  </div>
-                  <div className="ml-auto flex gap-0.5">
-                    {[...Array(5)].map((_, j) => (
-                      <Star key={j} size={10} className="text-[#c9956c]" fill="currentColor" />
-                    ))}
                   </div>
                 </div>
                 <p
