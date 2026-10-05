@@ -3,6 +3,12 @@
 import { Link } from "wouter";
 import { Instagram, Twitter, Youtube, Facebook, Music2 } from "lucide-react";
 
+const TikTokIcon = ({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M14.5 3c.5 1.5 1.6 2.6 3.2 3.1v2.7a6.9 6.9 0 0 1-3.2-1v7.6a5.5 5.5 0 1 1-5.5-5.5c.4 0 .8 0 1.2.1v2.8a3 3 0 1 0 1.8 2.7V3h3.5Z" fill="currentColor"/>
+  </svg>
+);
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -100,6 +106,7 @@ export default function Footer() {
                 { icon: Youtube, label: "YouTube", url: "https://www.youtube.com/@velaragirlgroup" },
                 { icon: Facebook, label: "Facebook", url: "https://www.facebook.com/velaragroup" },
                 { icon: Music2, label: "Spotify", url: "https://open.spotify.com" },
+                { icon: TikTokIcon, label: "TikTok", url: "https://www.tiktok.com/@velaragroup" },
               ].map((social) => {
                 const Icon = social.icon;
                 return (
@@ -108,6 +115,8 @@ export default function Footer() {
                     href={social.url}
                     className="social-icon"
                     title={social.label}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Icon size={16} />
                   </a>
