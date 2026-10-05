@@ -56,7 +56,7 @@ const merchandise = [
   { name: "VELARA Phone Case", price: "Coming Soon", category: "Accessories" },
   { name: "VELARA Poster Set", price: "Coming Soon", category: "Collectibles" },
   { name: "VELARA Tote Bag", price: "Coming Soon", category: "Accessories" },
-  { name: "VELARA Debut EP", price: "Coming Soon", category: "Music" },
+  { name: "VELARA Debut EP — Physical Edition", price: "Coming Soon", category: "Music" },
 ];
 
 function useReveal() {
