@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>VELARA</title>
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script>
+      // SPA fallback for GitHub Pages / static hosts that use 404.html as fallback.
+      // Fetch index.html and replace document so the client-side router can handle the original URL.
+      (function () {
+        var originalPath = location.pathname + location.search + location.hash;
+        try {
+          fetch('/index.html')
+            .then(function (r) { return r.text(); })
+            .then(function (html) {
+              document.open();
+              document.write(html);
+              document.close();
+              // Restore the original URL so the client router sees it.
+              try { history.replaceState({}, '', originalPath); } catch (e) {}
+            })
+            .catch(function () { location.replace('/'); });
+        } catch (e) {
+          location.replace('/');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
