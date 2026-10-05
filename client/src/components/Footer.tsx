@@ -23,7 +23,7 @@ export default function Footer() {
               className="text-[#f0eeec]/40 text-sm"
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
             >
-              Four voices. One vision. An afro girl group from Namibia with an international vision.
+              A Namibian Afro girl group with four voices, one vision, and a sound of our own.
             </p>
           </div>
 
