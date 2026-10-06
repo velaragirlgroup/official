@@ -29,7 +29,7 @@ const songs = [
     title: "Third Single",
     artist: "VELARA",
     duration: "TBA",
-    genre: "To Be Revealed",
+    genre: "To Be Announced",
     status: "2027",
   },
 ];
