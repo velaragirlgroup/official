@@ -182,7 +182,7 @@ export default function Music() {
                 fontSize: "clamp(2rem, 4vw, 3rem)",
               }}
             >
-              Stream on All <span className="text-[#c9956c]">Platforms</span>
+              Streaming <span className="text-[#c9956c]">Soon</span>
             </h2>
           </div>
 
@@ -226,7 +226,7 @@ export default function Music() {
               className="reveal-hidden text-[#f0eeec]/50 leading-relaxed mb-6"
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
             >
-              VELARA’s debut EP is set for 2027 and will feature four original tracks exploring different sides of our sound. From progressive Afropop to Afro-house and dance influences, the pr[...] 
+              VELARA’s debut EP is set for 2027 and will feature four original tracks exploring different sides of our sound. From progressive Afropop to Afro-house and dance influences, the project is designed to showcase who we are while offering a fresh take on modern African pop. The EP reflects our growth as artists and the sound we want to share with the world.
             </p>
             <p
               className="reveal-hidden text-[#f0eeec]/50 leading-relaxed mt-4"
