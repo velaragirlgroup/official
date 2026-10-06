@@ -102,11 +102,7 @@ export default function Music() {
               className="text-[#f0eeec]/50 leading-relaxed text-lg"
               style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300 }}
             >
-              VELARA’s sound is built around progressive Afropop, blending African influences with contemporary sounds,
-              dance-driven rhythms and our own creative approach. With four distinct voices and a shared vision, we create
-              music that feels fresh, expressive and unmistakably our own. Singing in English and Rukwangali allows us to
-              carry our Namibian identity into our music while connecting with listeners across cultures. As our sound evolves,
-              we aim to explore new influences while staying connected to who we are and where we come from.
+              VELARA’s sound is built around a progressive Afro sound, bringing together African influences, international inspiration, contemporary production, dance-driven rhythms and our own creative approach. With four distinct voices and a shared vision, we create music that feels fresh, expressive and unmistakably our own. Singing in English and Rukwangali allows us to carry our Namibian identity into our music while connecting with listeners across cultures. As our sound evolves, we continue to explore influences from Africa and around the world while staying connected to who we are and where we come from.
             </p>
           </div>
         </div>
