@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageSEO from "@/components/PageSEO";
-import { Play, Pause, Music2 } from "lucide-react";
+import { Play, Pause, Music2, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 
 const MUSIC_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663654751519/8LJbc7dpqWYxTfrtzQxCU5/velara_music_bg-WtMtnLGFSA85b5NP4daeDs.webp";
@@ -188,20 +188,22 @@ export default function Music() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {platforms.map((platform, i) => (
-              <button
+              <a
                 key={platform.name}
-                onClick={() => toast.info(`${platform.name} streaming links coming soon!`)}
+                href={platform.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="reveal-hidden border border-white/5 p-6 text-center hover:border-[#c9956c]/30 transition-colors"
                 style={{ transitionDelay: `${i * 50}ms` }}
               >
                 <div
-                  className="text-[#f0eeec]/60 text-sm flex flex-col items-center justify-center gap-1 hover:text-[#c9956c] transition-colors"
+                  className="text-[#f0eeec]/60 text-sm flex items-center justify-center gap-2 hover:text-[#c9956c] transition-colors"
                   style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400 }}
                 >
-                  <span className="font-semibold">{platform.name}</span>
-                  <span className="text-[#c9956c] text-xs">Streaming Soon</span>
+                  {platform.name}
+                  <ExternalLink size={12} />
                 </div>
-              </button>
+              </a>
             ))}
           </div>
         </div>
