@@ -29,7 +29,7 @@ const songs = [
     title: "Untitled Track 3",
     artist: "VELARA",
     duration: "TBA",
-    genre: "Progressive Afropop",
+    genre: "To Be Revealed",
     status: "2027",
   },
 ];
