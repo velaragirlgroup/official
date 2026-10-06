@@ -19,14 +19,14 @@ const songs = [
     status: "2026",
   },
   {
-    title: "Untitled Track 2",
+    title: "Second Single",
     artist: "VELARA",
     duration: "TBA",
     genre: "Afro House",
     status: "2027",
   },
   {
-    title: "Untitled Track 3",
+    title: "Third Single",
     artist: "VELARA",
     duration: "TBA",
     genre: "To Be Revealed",
@@ -104,7 +104,7 @@ export default function Music() {
             >
               VELARA’s sound is built around progressive Afropop, blending African influences with contemporary sounds,
               dance-driven rhythms and our own creative approach. With four distinct voices and a shared vision, we create
-              music that feels fresh, expressive and unmistakably our own. Singing in English and Rukwangali African language allows us to
+              music that feels fresh, expressive and unmistakably our own. Singing in English and Rukwangali allows us to
               carry our Namibian identity into our music while connecting with listeners across cultures. As our sound evolves,
               we aim to explore new influences while staying connected to who we are and where we come from.
             </p>
