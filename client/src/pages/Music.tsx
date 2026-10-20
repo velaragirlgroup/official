@@ -15,14 +15,14 @@ const songs = [
     title: "Debut Single",
     artist: "VELARA",
     duration: "TBA",
-    genre: ""To Be Announced",
+    genre: "To Be Announced",
     status: "2026",
   },
   {
     title: "Second Single",
     artist: "VELARA",
     duration: "TBA",
-    genre: ""To Be Announced",
+    genre: "To Be Announced",
     status: "2027",
   },
   {
