@@ -32,6 +32,13 @@ const songs = [
     genre: "To Be Announced",
     status: "Planned for 2027",
   },
+  {
+    title: "Fourth Single",
+    artist: "VELARA",
+    duration: "TBA",
+    genre: "To Be Announced",
+    status: "Planned for 2027",
+  },
 ];
 
 const platforms = [
